@@ -1,4 +1,6 @@
+
 import { Component,Input, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
@@ -7,10 +9,16 @@ import { Component,Input, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Input() isBottom: any;
-
+  label = "Subscribe Now"
   constructor() {}
 
-  ngOnInit() {}
-
+  ngOnInit() {
+   
+    // this.http.get('http://localhost:4200/assets/json/carousel-data.json')
+    //              .subscribe((data:any) => console.log(data));
+  }
+  functioncall(event:any) {
+    console.log('functioncall', event);
+  }
 
 }

@@ -4,29 +4,38 @@
   position: absolute;
   top: 0px;
   display: flex;
+  flex-direction: column;
+ justify-content: center;
+ 
+}
+.header-flex{
+ 
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 20px;
+ 
 }
-
 .top {
   background-color: rgba(0, 0, 0, 0);
   background-image: linear-gradient(rgb(0, 0, 0) 20%, rgba(0, 0, 0, 0));
 }
 
 .bottom {
-  background-color: yellow;
+  background-color: black;
 }
 
 .navlink {
   display: flex;
-  margin-left: 30px;
+  /* margin-left: 30px; */
   align-items: center;
 }
 .navlink-right {
   
   display: flex;
   align-items: center;
-  margin-left: 30px;
+  /* margin-left: 30px; */
 }
 .navbar-left {
  
@@ -37,7 +46,7 @@
   margin-right: 50px;
 }
 #logo {
-  
+  margin-right: 50px;
   width: 62px;
   height: 43px;
 }
@@ -47,42 +56,81 @@
   color: rgba(255, 255, 255, 0.698);
   font-size: 16px;
   font-weight: 600;
-  margin-right: 50px;
+  /* margin-right: 50px; */
 }
 #lang-icon {
   width: 24px;
   height: 24px;
+  margin-right: 50px;
+}
+#user-icon{
+  height: 30px;
+  width: 33px;
+  margin-right: 10px;
 }
 .mobile-header {
   display: none;
 }
 @media screen and (max-width: 958px) {
+
   .header {
    height: 115px;
    width: 100%;
-   /* align-items: flex-start; */
    
   }
   .top {
    background-color: black;
   }
-  
+ 
   .bottom {
     background-color: yellow;
   }
-  .navbar-right{
-    margin-right: 15px;
+  .header-flex{
+    margin-top: 30px;
   }
+  /* .navbar-right{
+    margin-top: 20px;
+    margin-right: 15px;
+  } */
   .navlink{
     justify-content: center;
-    align-items: center;
-    margin: auto;
+   /* padding-top: 10px; */
+    margin: 0 auto;
+   
+  }
+  .navlink-right div{
+    display: none;
   }
   .navlink div{
     display: none;
   }
-  .navbar-left{
+  /* .navbar-left{
     display: none;
+  } */
+  .mobile-header{
+    margin: 20px;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #btn-all{
+    cursor: pointer;
+  
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+    background: linear-gradient(180deg,#3b4046,#2d3037);
+    box-shadow: 0 4px 4px rgba(0,0,0,.25);
+    border-radius: 20px;
+    outline-style: none;
+    background-color: palegoldenrod;
+    padding: 10px 20px;
+  }
+ 
+  #lang-icon {
+  
+    margin-right: 10px;
   }
   
 }

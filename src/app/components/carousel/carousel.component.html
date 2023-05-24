@@ -1,0 +1,5 @@
+<div class="carousel-container">
+    <img *ngFor="let item of carouselList;let i=index" [src]="item['image']" [alt]=imageAlt
+    [ngClass]="{'image-active':selectedIndex===i}"
+    >
+</div>

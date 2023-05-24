@@ -1,0 +1,15 @@
+/* .carousel-container{
+    position: relative;
+    width: 100%;
+
+}
+.carousel-container img{
+    display: none;
+background-size: cover;
+background-repeat: no-repeat;
+} */
+.carousel-container img.image-active{
+    /* display: inline; */
+    /* width: 100%;
+    height: 380px; */
+}
