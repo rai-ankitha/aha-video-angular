@@ -16,17 +16,20 @@
 .bottom {
   background-color: yellow;
 }
+
 .navlink {
   display: flex;
   margin-left: 30px;
   align-items: center;
 }
 .navlink-right {
+  
   display: flex;
   align-items: center;
   margin-left: 30px;
 }
 .navbar-left {
+ 
   cursor: pointer;
   color: rgba(255, 255, 255, 0.698);
   font-size: 16px;
@@ -34,6 +37,7 @@
   margin-right: 50px;
 }
 #logo {
+  
   width: 62px;
   height: 43px;
 }
@@ -54,23 +58,31 @@
 }
 @media screen and (max-width: 958px) {
   .header {
+   height: 115px;
+   width: 100%;
+   /* align-items: flex-start; */
+   
+  }
+  .top {
+   background-color: black;
+  }
+  
+  .bottom {
+    background-color: yellow;
+  }
+  .navbar-right{
+    margin-right: 15px;
+  }
+  .navlink{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .navlink div{
     display: none;
   }
-  #logo {
-    width: 62px;
-    height: 43px;
+  .navbar-left{
+    display: none;
   }
-  .mobile-header {
-    display: block;
-    height: 75px;
-    width: 100%;
-    position: absolute;
-    top: 0px;
-  }
-  .logo-flex{
-    color: black;
-    display: flex;
-    margin-top: 30px;
-    justify-content: center;
-  }
+  
 }
