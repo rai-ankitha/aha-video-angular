@@ -13,7 +13,7 @@ import {HttpClientModule } from '@angular/common/http';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ImageSliderCardComponent } from './components/image-slider-card/image-slider-card.component';
 import { SliderComponent } from './components/slider/slider.component';
-import { NgImageSliderModule } from 'ng-image-slider';
+// import { NgImageSliderModule } from 'ng-image-slider';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +31,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgImageSliderModule
+    // NgImageSliderModule
 
   ],
   providers: [],

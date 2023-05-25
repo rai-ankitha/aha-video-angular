@@ -12,7 +12,7 @@
         },
         {
             "id": 3,
-            "image": "https://cinebuds.com/wp-content/uploads/2021/05/Play-Back-Telugu-Movie-is-streaming-on-Aha-Video.jpg"
+            "image": "https://image-resizer-cloud-api.akamaized.net/image/FCE99B91-3540-461D-80D7-D718125E52E4/0-3x1.jpg?width=2049"
            
         },
         {
@@ -26,6 +26,18 @@
         {
             "id": 6,
             "image": "https://bingeddata.s3.amazonaws.com/uploads/2020/11/Anaganaga-O-Athidhi-Movie-Review-Binged.jpg"
+        },
+        {
+            "id":7,
+            "image":"https://image-resizer-cloud-api.akamaized.net/image/A98FB9D1-EE56-455D-A460-600BD454AA3E/0-3x1.jpg?width=2049"
+        },
+        {
+            "id":8,
+            "image":"https://image-resizer-cloud-api.akamaized.net/image/854159CB-2C65-4946-9C12-A43960A3496F/0-3x1.jpg?width=2049"
+        },
+        {
+            "id":9,
+            "image":"https://image-resizer-cloud-api.akamaized.net/image/56FEEDB4-250A-4718-B3BF-F04E204BEBE6/0-3x1.jpg?width=2049"
         }
         
     ]
