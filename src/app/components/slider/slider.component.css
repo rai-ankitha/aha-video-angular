@@ -1,0 +1,9 @@
+.content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px 20px 20px;
+}
+.content-heading{
+    color: #ffff;
+    font-size: 20px
+}

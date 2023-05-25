@@ -87,6 +87,7 @@
 
 /* style the arrows */
 .arrow {
+ 
   display: block;
   border-left: 0.1em solid white;
   border-bottom: 0.1em solid white;
@@ -100,9 +101,39 @@
     transform: rotate(225deg);
   }
 }
-#arrow-left{
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  
+/* 
+.carousel-container:hover + .arrow{
+  display: block;
+  border-left: 0.1em solid white;
+  border-bottom: 0.1em solid white;
+  width: 0.5em;
+  height: 0.5em;
+border: yellow;
+  &.left {
+    transform: rotate(45deg);
+  }
+  &.right {
+    transform: rotate(225deg);
+  }
+} */
+/* .carousel-container img:hover + .arrow{
+  background-color: yellow;
+  display: block;
+  border-left: 0.1em solid white;
+  border-bottom: 0.1em solid white;
+  width: 0.5em;
+  height: 0.5em;
+
+  &.left {
+    transform: rotate(45deg);
+  }
+  &.right {
+    transform: rotate(225deg);
+  }
+} */
+
+@media screen and (max-width: 958px) {
+  .btn-carousel{
+    display: none;
+  }
 }

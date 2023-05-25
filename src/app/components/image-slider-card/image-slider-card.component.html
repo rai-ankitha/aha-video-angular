@@ -1,0 +1,22 @@
+<!-- <section class="product">
+    
+        <div class="slider-wrap">
+            <div class="slider-main">
+                <div class="item">
+                    <div class="text">7</div>
+                </div>
+            </div>
+        </div>
+  
+</section> -->
+<div class="card-items">
+    <div class="container" *ngFor="let item of dataList ;let i=index
+    " >
+    <div  class="card-container">
+       
+    <img id="card-img" [src]="item['image']" alt="image"> 
+    </div>
+    <div id="text">{{item['name']}}</div>
+</div>
+</div>
+<!-- <ng-image-slider [images]="dataList" #nav></ng-image-slider> -->

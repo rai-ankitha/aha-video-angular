@@ -1,0 +1,10 @@
+<div class="card-items">
+    <div *ngFor="let item of seriesValues |keyvalue:originalOrder ;let i=index
+    " class="card-container">
+    <div class="content">
+        <div class="content-heading">{{item.key}}</div>
+        <div class="content-heading">See all</div>
+        </div>
+    <app-image-slider-card [dataList]="item.value"></app-image-slider-card>
+    </div>
+</div>

@@ -12,4 +12,8 @@ export class DataService {
   getCarouselData(){
     return this.http.get(environment.url + 'carousel-data.json');
   }
+
+  getSeriesData(){
+    return this.http.get(environment.url + 'series.json');
+  }
 }

@@ -1,0 +1,42 @@
+{
+    "data": 
+        {
+            "New Releases":[
+                {
+                    "image":"https://image-resizer-cloud-api.akamaized.net/image/A98FB9D1-EE56-455D-A460-600BD454AA3E/0-2x3.jpg?width=240",
+                    "name":"Newsense"
+                },
+                {
+                    "image":"https://image-resizer-cloud-api.akamaized.net/image/409BFAC0-9237-497C-AD8D-84831D2DA0DD/0-2x3.jpg?width=240",
+                    "name":"Ultimate Challenge"
+                },
+                {
+                    "image":"https://image-resizer-cloud-api.akamaized.net/image/FCE99B91-3540-461D-80D7-D718125E52E4/0-2x3.jpg?width=240",
+                    "name":"Geetha Subramanyam"
+                },
+                {
+                    "image":"https://image-resizer-cloud-api.akamaized.net/image/338E8AD1-E760-4F1E-B260-26E618B6315E/0-2x3.jpg?width=240",
+                    "name":"EP5 : Sarkaar 3 Episode 5"
+                }
+            ],
+            "Daily Serial - Mandakini":[
+                {
+                    "image":"https://image-resizer-cloud-api.akamaized.net/image/409BFAC0-9237-497C-AD8D-84831D2DA0DD/0-2x3.jpg?width=240",
+                    "name":""
+                },
+                {
+                    "image":"https://image-resizer-cloud-api.akamaized.net/image/338E8AD1-E760-4F1E-B260-26E618B6315E/0-2x3.jpg?width=240",
+                    "name":""
+                },
+                {
+                    "image":"https://image-resizer-cloud-api.akamaized.net/image/A98FB9D1-EE56-455D-A460-600BD454AA3E/0-2x3.jpg?width=240",
+                    "name":""
+                },
+                {
+                    "image":"https://image-resizer-cloud-api.akamaized.net/image/FCE99B91-3540-461D-80D7-D718125E52E4/0-2x3.jpg?width=240",
+                    "name":""
+                }
+            ]
+        }
+    
+}

@@ -1,7 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 1000px; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+  background-image: url(https://www.aha.video/backgroundcheck.975c41117a3dd7355f3b.svg);
+  background-color: rgb(29, 30, 32);
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
