@@ -9,8 +9,20 @@ import { DataService } from 'src/app/services/data.service';
 export class CarouselComponent implements OnInit{
   constructor(private dataService:DataService){}
   carouselList:any;
-  selectedIndex:number=0;
+  currentIndex:number=0;
+  slideInterval:number=3000;
   imageAlt="https://eurogeo6.org/wp-content/uploads/2020/09/40-1038x576.jpg";
+  
+  goToNext(){
+    const isLast=this.currentIndex==this.carouselList.length-1;
+    const newIndex=isLast?0:this.currentIndex+1;
+    this.currentIndex=newIndex;
+  }
+  goToPrevious(){
+    const isFirst=this.currentIndex==0;
+    const newIndex=isFirst?this.carouselList.length-1:this.currentIndex-1;
+    this.currentIndex=newIndex;
+  }
   ngOnInit(): void {
     this.dataService.getCarouselData().subscribe((data:any) =>{
       this.carouselList=data['data'];
@@ -19,6 +31,15 @@ export class CarouselComponent implements OnInit{
         
       }
       console.log(data)});
+      this.autoSlideImages();
   }
+selectImage(index:number){
+  this.currentIndex=index
+}
+autoSlideImages(){
+  setInterval(()=>{
+    this.goToNext();
 
+  },this.slideInterval)
+}
 }

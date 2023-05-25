@@ -1,5 +1,21 @@
 <div class="carousel-container">
     <img *ngFor="let item of carouselList;let i=index" [src]="item['image']" [alt]=imageAlt
-    [ngClass]="{'image-active':selectedIndex===i}"
+    [ngClass]="{'image-active':currentIndex===i}" 
     >
+    <div class="carousel-dot-container">
+        <div (click)="selectImage(i)" *ngFor="let dot of carouselList;let i=index" class="dot-class" [ngClass]="{'active':currentIndex===i
+    }"></div>
+    </div>
+    <!-- <div class="btn-carousel btn-prev">
+        <img id="arrow-left" src="https://www.aha.video/search-icon.704c679b82e10dd8379c.svg" alt="arrow-left">
+    </div> -->
+    <div (click)=" goToPrevious()" class="btn-carousel prev">
+        <span class="arrow left"></span>
+    </div>
+    <div (click)="goToNext()" class="btn-carousel next">
+        <span class="arrow right"></span>
+    </div>
 </div>
+
+
+<!-- https://www.aha.video/left-arrow.9dac92970c7bc4c051e3.png -->

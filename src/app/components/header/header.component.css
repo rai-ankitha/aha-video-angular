@@ -1,15 +1,15 @@
 .header {
   height: 75px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0px;
   display: flex;
   flex-direction: column;
  justify-content: center;
- 
+ z-index: 1;
 }
 .header-flex{
- 
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,12 +18,14 @@
  
 }
 .top {
+
   background-color: rgba(0, 0, 0, 0);
   background-image: linear-gradient(rgb(0, 0, 0) 20%, rgba(0, 0, 0, 0));
 }
 
 .bottom {
-  background-color: black;
+
+  background-color: rgb(29,30,32);
 }
 
 .navlink {
@@ -83,10 +85,10 @@
   }
  
   .bottom {
-    background-color: yellow;
+    background-color: rgb(29,30,32);
   }
   .header-flex{
-    margin-top: 30px;
+    margin-top: 50px;
   }
   /* .navbar-right{
     margin-top: 20px;
@@ -95,7 +97,7 @@
   .navlink{
     justify-content: center;
    /* padding-top: 10px; */
-    margin: 0 auto;
+    margin: 0px auto;
    
   }
   .navlink-right div{
@@ -108,7 +110,8 @@
     display: none;
   } */
   .mobile-header{
-    margin: 20px;
+   
+    margin: 10px 20px 40px 20px;
     display: flex;
     color: white;
     justify-content: space-between;
@@ -116,16 +119,24 @@
   }
   #btn-all{
     cursor: pointer;
-  
+  margin-bottom: 10px;
    display: flex;
    justify-content: space-between;
    align-items: center;
     background: linear-gradient(180deg,#3b4046,#2d3037);
     box-shadow: 0 4px 4px rgba(0,0,0,.25);
+    border: none;
     border-radius: 20px;
-    outline-style: none;
-    background-color: palegoldenrod;
-    padding: 10px 20px;
+    outline: none;
+    color: #ffff;
+    padding: 10px 30px;
+  }
+  #menu-icon{
+    margin-right: 10px;
+    color: orange;
+    width: 18px;
+    height: 18px;
+    background: none;
   }
  
   #lang-icon {

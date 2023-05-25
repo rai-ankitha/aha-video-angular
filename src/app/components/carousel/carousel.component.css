@@ -1,15 +1,108 @@
-/* .carousel-container{
-    position: relative;
-    width: 100%;
+.carousel-container {
+  position: relative;
+  margin: auto;
+  width: 100%;
+}
+
+.carousel-container img {
+  display: none;
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.carousel-container img.image-active {
+  display: block;
+  width: 100%;
+  height: 700px;
+}
+/* indicators*/
+.carousel-dot-container{
+ 
+    /* background-color: yellow; */
+ 
+    position: relative; 
+    right: 0;
+    left: 0;
+    padding: 1rem;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+  
+}
+.dot-class{
+  color: #000;
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+   margin: 10px 5px;
+    
+    background-color:rgb(113, 113, 113);
+    border-radius: 80%;
+    display:inline-block;
+    transition: opacity 0.6s ease;
+    opacity: 0.5;
 
 }
-.carousel-container img{
-    display: none;
-background-size: cover;
-background-repeat: no-repeat;
-} */
-.carousel-container img.image-active{
-    /* display: inline; */
-    /* width: 100%;
-    height: 380px; */
+.active,.dot:hover{
+  opacity: 1;
+}
+.btn-carousel {
+/* background-color: yellow; */
+  border: none;
+  outline: 0;
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0.5em; */
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  user-select: none;
+  /* height: 100%; */
+  top: 0;
+  bottom: 0;
+  width: 5%;
+  opacity: 80%;
+  transition: opacity 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+
+  &:hover, &:focus {
+    opacity: 1;
+  }
+
+  /* Position the buttons */
+  &.next {
+    /* background-color: red; */
+    right: 0;
+  }
+  &.prev {
+    /* background-color: blue; */
+    left: 0;
+  }
+}
+
+/* style the arrows */
+.arrow {
+  display: block;
+  border-left: 0.1em solid white;
+  border-bottom: 0.1em solid white;
+  width: 0.5em;
+  height: 0.5em;
+
+  &.left {
+    transform: rotate(45deg);
+  }
+  &.right {
+    transform: rotate(225deg);
+  }
+}
+#arrow-left{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  
 }

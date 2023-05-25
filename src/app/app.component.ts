@@ -11,7 +11,7 @@ export class AppComponent {
   @HostListener('window:scroll', [])
   onScroll(): void {
     console.log(window.scrollY);
-    if(window.scrollY>100){
+    if(window.scrollY>0){
       this.isBottom = true;
     }
     else{

@@ -11,6 +11,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { OrangeButtonComponent } from './components/common/orange-button/orange-button.component';
 import {HttpClientModule } from '@angular/common/http';
 import { CarouselComponent } from './components/carousel/carousel.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
