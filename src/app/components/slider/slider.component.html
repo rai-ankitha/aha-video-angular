@@ -1,10 +1,16 @@
-<div class="card-items">
-    <div *ngFor="let item of seriesValues |keyvalue:originalOrder ;let i=index
-    " class="card-container">
-    <div class="content">
-        <div class="content-heading">{{item.key}}</div>
-        <div class="content-heading">See all</div>
-        </div>
-    <app-image-slider-card [dataList]="item.value"></app-image-slider-card>
-    </div>
+<div
+  *ngFor="let item of seriesValues | keyvalue : originalOrder; let i = index"
+  class="card-items"
+>
+  <div class="content">
+    <div class="content-heading">{{ item.key }}</div>
+    <div *ngIf="item.value.length>7" class="content-heading">See all</div>
+  </div>
+  <app-image-slider-card
+  [dataKey]="item.key"
+    [dataList]="item.value"
+    
+  ></app-image-slider-card>
 </div>
+
+<app-actors-card [actorsList]="actorsList"></app-actors-card>

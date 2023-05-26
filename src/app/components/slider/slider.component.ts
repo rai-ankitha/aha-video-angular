@@ -11,8 +11,7 @@ export class SliderComponent implements OnInit{
   constructor(private dataService:DataService){}
   seriesList:any;
   seriesValues:any;
-  newReleaseList:any;
-  dailySerialList:any;
+  actorsList:any;
   originalOrder = (a: KeyValue<number,string>, b: KeyValue<number,string>): number => {
     return 0;
   }
@@ -28,5 +27,11 @@ export class SliderComponent implements OnInit{
       }
       
       });
+
+      this.dataService.getActorsData().subscribe((res:any) =>{
+        this.actorsList=res['data']
+
+        
+        });
   }
 }

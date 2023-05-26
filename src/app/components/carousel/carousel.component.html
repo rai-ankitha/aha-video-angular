@@ -1,7 +1,7 @@
 <div class="carousel-container">
     <img *ngFor="let item of carouselList;let i=index" [src]="item['image']" [alt]=imageAlt
     [ngClass]="{'image-active':currentIndex===i}" 
-    >
+    class="transion-class">
     <div class="carousel-dot-container">
         <div (click)="selectImage(i)" *ngFor="let dot of carouselList;let i=index" class="dot-class" [ngClass]="{'active':currentIndex===i
     }"></div>

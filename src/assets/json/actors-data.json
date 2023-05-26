@@ -1,0 +1,20 @@
+
+
+{
+    "data":[
+        {
+            "id": 1,
+            "image": "https://image-resizer-cloud-api.akamaized.net/image/8995C63C-D9F9-4D0D-91E3-5432765F028A/3-1x1.jpg?width=195"
+            
+        },
+        {
+            "id": 2,
+            "image": "https://image-resizer-cloud-api.akamaized.net/image/8995C63C-D9F9-4D0D-91E3-5432765F028A/3-1x1.jpg?width=195"
+            
+        },
+        {
+            "id": 3,
+            "image": "https://image-resizer-cloud-api.akamaized.net/image/8995C63C-D9F9-4D0D-91E3-5432765F028A/3-1x1.jpg?width=195"
+           
+        }
+    ]}

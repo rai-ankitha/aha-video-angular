@@ -16,4 +16,8 @@ export class DataService {
   getSeriesData(){
     return this.http.get(environment.url + 'series.json');
   }
+
+  getActorsData(){
+    return this.http.get(environment.url + 'actors-data.json');
+  }
 }
