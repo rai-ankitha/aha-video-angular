@@ -6,7 +6,7 @@
 .footer-content{
     display: flex;
     flex-wrap: wrap;
-    width: 95%;
+    width: 93%;
     margin: auto;
     margin-top:2%;
     margin-bottom: 50px;
@@ -94,7 +94,7 @@ margin-right:20px;
     width: 90px;
     height: 22px;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   
     .contact-info{
        margin-left: 10%;
