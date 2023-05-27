@@ -14,7 +14,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { ImageSliderCardComponent } from './components/image-slider-card/image-slider-card.component';
 import { SliderComponent } from './components/slider/slider.component';
 // import { NgImageSliderModule } from 'ng-image-slider';
-import { CarouselModule } from 'ngx-owl-carousel-o';
+// import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ActorsCardComponent } from './components/actors-card/actors-card.component';
 
 @NgModule({
@@ -36,7 +36,7 @@ import { ActorsCardComponent } from './components/actors-card/actors-card.compon
     BrowserAnimationsModule,
     HttpClientModule,
   
-    CarouselModule,
+    // CarouselModule,
    
     // NgImageSliderModule
 

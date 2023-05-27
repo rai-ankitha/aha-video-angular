@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+// import { OwlOptions } from 'ngx-owl-carousel-o';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
