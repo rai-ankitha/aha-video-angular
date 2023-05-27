@@ -9,5 +9,7 @@
 }
 .content-heading{
     color: #ffff;
-    font-size: 20px
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }

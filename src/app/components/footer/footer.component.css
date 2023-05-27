@@ -1,6 +1,6 @@
 .footer{
     display: block;
-    
+     margin-top:5%;
     /* margin-right:2%; */
 }
 .footer-content{
@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     width: 93%;
     margin: auto;
-    margin-top:2%;
+   
     margin-bottom: 50px;
     align-items: flex-start;
     justify-content: space-between;
@@ -109,5 +109,11 @@ margin-right:20px;
     .footer-bottom {
         display: flex;
         flex-direction:column-reverse;
+    }
+}
+
+@media screen and (max-width: 958px) {
+    .footer-bottom {
+        width: calc(75% + 0.3874vw);
     }
 }

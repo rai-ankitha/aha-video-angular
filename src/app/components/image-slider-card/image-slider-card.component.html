@@ -13,7 +13,7 @@
 <div class="card-items">
   <div class="container" *ngFor="let item of dataList; let i = index">
     <div
-      [ngClass]="className"
+      [ngClass]="className" class="card-class"
       [ngStyle]="{ 'background-image': 'url(' + item['image'] + ')'}"
     ><div *ngIf="item['isPremium']" class="premium-tag">
         <div class="tag-icon"></div>

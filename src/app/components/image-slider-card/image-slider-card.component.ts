@@ -12,7 +12,7 @@ export class ImageSliderCardComponent implements OnInit{
   @Input() dataKey:any;
   @Input() dataList:any;
   isTextBottom:boolean=false;
-  className:string='new-release-class'
+  className:string='card-class'
   width:string='10vw';
   ngOnInit(): void {
     console.log('inside image slider');
@@ -24,6 +24,25 @@ export class ImageSliderCardComponent implements OnInit{
     }
     else if(this.dataKey=='Trending Top 10'){
       this.className='trending-class';
+    }
+    else if(this.dataKey=="Actors (A-Z)"){
+      this.className='actors-class';
+    }
+    else if(this.dataKey=="aha Originals"){
+      this.className='aha-originals';
+      this.isTextBottom=true;
+    }
+    else if(this.dataKey=="Genres"){
+      this.className='genres';
+      this.isTextBottom=true;
+    }
+    else if(this.dataKey=="News Highlights"){
+      this.className='news-class';
+ 
+    }
+    else if(this.dataKey=="Getting started with aha"){
+      this.className='getting-started';
+     
     }
     else{
       this.className="new-release-class";
