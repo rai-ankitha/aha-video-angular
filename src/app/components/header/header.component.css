@@ -30,14 +30,13 @@
 
 .navlink {
   display: flex;
-  /* margin-left: 30px; */
   align-items: center;
 }
 .navlink-right {
   
   display: flex;
   align-items: center;
-  /* margin-left: 30px; */
+  
 }
 .navbar-left {
  
@@ -58,7 +57,7 @@
   color: rgba(255, 255, 255, 0.698);
   font-size: 16px;
   font-weight: 600;
-  /* margin-right: 50px; */
+  
 }
 #lang-icon {
   width: 24px;
@@ -79,7 +78,7 @@
   .header {
    height: 115px; 
   width: 100%;
-   
+  overflow: scroll;
   }
   .top {
    background-color: black;
@@ -91,10 +90,7 @@
   .header-flex{
     margin-top: 50px;
   }
-  /* .navbar-right{
-    margin-top: 20px;
-    margin-right: 15px;
-  } */
+  
   .navlink{
     justify-content: center;
     align-items: center;
@@ -108,21 +104,14 @@
   .navlink div{
     display: none;
   }
-  /* .navbar-left{
-    display: none;
-  } */
+
   .mobile-header{
    
     margin: 10px 20px 40px 20px;
     display:flex;
-    /* flex: 1; 
-     flex-grow: 1;
-    flex-basis: 0; */
     color: white;
-    /* overflow-x: scroll;   */
     justify-content: space-between;
     align-items: center; 
-     /* width: 120%;  */
     
   }
 

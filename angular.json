@@ -30,11 +30,6 @@
                 "glob": "series.json",
                 "input": "../",
                 "output": "./assets/json"
-              },
-              {
-                "glob": "actors-data.json",
-                "input": "../",
-                "output": "./assets/json"
               }
             ],
             "styles": [

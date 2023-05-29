@@ -1,17 +1,11 @@
-<!-- <section class="product">
-    
-        <div class="slider-wrap">
-            <div class="slider-main">
-                <div class="item">
-                    <div class="text">7</div>
-                </div>
-            </div>
-        </div>
-  
-</section> -->
 
-<div class="card-items">
-  <div class="container" *ngFor="let item of dataList; let i = index">
+
+<!-- <div class="card-items">
+    <div class="caro-btn" style="float: left">
+        <button class="left" (click)="scrollLeft()">left</button>
+    </div>
+    
+  <div class="container" *ngFor="let item of dataList; let index = index; let last = last">
     <div
       [ngClass]="className" class="card-class"
       [ngStyle]="{ 'background-image': 'url(' + item['image'] + ')'}"
@@ -22,12 +16,46 @@
       <div *ngIf="isTextBottom" id="img-text">{{ item["name"] }}</div>
     </div>
     <div *ngIf="!isTextBottom" id="text">{{ item["name"] }}</div>
-    <!-- <div *ngIf="!isTextBottom" class="card-container">
-      <img id="card-img" [src]="item['image']" alt="image" />
-      <div id="text">{{ item["name"] }}</div>
-    </div> -->
+   
   </div>
+
+  <div class="caro-btn" style="float: right">
+    <button class="right" (click)="scrollRight()">right</button>
 </div>
+  
+</div> -->
+
+
+
+
+<div class="card-items">
+    <div *ngIf="dataList.length>8"  class="btn-carousel prev">
+        <div (click)="previous()" class="arrow left"></div>
+    </div>
+    
+  <div class="container" *ngFor="let item of testDataShown; let index = index; let last = last">
+    <div
+      [ngClass]="className" class="card-class"
+      [ngStyle]="{ 'background-image': 'url(' + item['image'] + ')'}"
+    ><div *ngIf="item['isPremium']" class="premium-tag">
+        <div class="tag-icon"></div>
+        <p id="tag-text">Premium</p>
+    </div>
+      <div *ngIf="isTextBottom" id="img-text">{{ item["name"] }}</div>
+    </div>
+    <div *ngIf="!isTextBottom" id="text">{{ item["name"] }}</div>
+   
+  </div>
+
+<div  *ngIf="dataList.length>8"  class="btn-carousel next">
+    <div (click)="next()" class="arrow right"></div>
+</div>
+  
+</div>
+
+
+
+
 
 <!-- ********************************************** -->
 
@@ -46,78 +74,3 @@
 
 <!-- ********************************************** -->
 
-<!-- <div>
-    <div class="button-area">
-        <button class="prev">Prev</button>
-        <button>Next</button>
-    </div>
-<div class="card-items">
-    <div class="container" *ngFor="let item of dataList ;let i=index
-    " >
-    <div  class="card-container">
-       
-    <img id="card-img" [src]="item['image']" alt="image"> 
-    </div>
-    <div id="text">{{item['name']}}</div>
-</div>
-</div>
-</div> -->
-
-<!-- <div  class="btn-carousel prev">
-    <span class="arrow left"></span>
-</div>
-<div  class="btn-carousel next">
-    <span class="arrow right"></span>
-</div> -->
-
-<!-- </div> -->
-
-<!-- <ng-image-slider [images]="dataList" #nav></ng-image-slider> -->
-
-<!-- <div class="owl-carousel owl-theme">
-    <div class="container"  *ngFor="let slide of dataList">
-      <div  class="item">
-        <img id="card-img" [src]="slide['image']">
-      </div>
-      <div id="text">{{slide['name']}}</div>
-    </div>
-</div> -->
-
-<!-- <owl-carousel-o [options]="customOptions">
-    
-    <div class="container" *ngFor="let item of dataList">
-        <div  class="card-container">
-       
-            <img id="card-img" [src]="item['image']" alt="image"> 
-            </div>
-            <div id="text">{{item['name']}}</div>
-        </div>
-
-  </owl-carousel-o> -->
-<!-- <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide>
-        <div class="slide">
-            slide5
-        </div>
-    </ng-template>
-    <ng-template carouselSlide>
-        <div class="slide">
-            slide5
-        </div>
-    </ng-template>
-    <ng-template carouselSlide>
-        <div class="slide">
-            slide5
-        </div>
-    </ng-template>
-    <ng-template carouselSlide>
-        <div class="slide">
-            slide5
-        </div>
-    </ng-template>
-    <ng-template carouselSlide>
-        <div class="slide">
-           slide5
-        </div>
-    </ng-template>
-</owl-carousel-o> -->

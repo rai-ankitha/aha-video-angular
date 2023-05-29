@@ -1,21 +1,35 @@
 import { Component, Input, OnInit } from '@angular/core';
-// import { OwlOptions } from 'ngx-owl-carousel-o';
-import { DataService } from 'src/app/services/data.service';
-
+import { ViewChild, ElementRef } from "@angular/core";
 @Component({
   selector: 'app-image-slider-card',
   templateUrl: './image-slider-card.component.html',
   styleUrls: ['./image-slider-card.component.css']
 })
 export class ImageSliderCardComponent implements OnInit{
-  constructor(private dataService:DataService){}
+
+  @ViewChild('widgetsContent', { read: ElementRef })
+  public widgetsContent!: ElementRef<any>;
+
+  public scrollRight(): void {
+    this.widgetsContent.nativeElement.scrollTo({ left: (this.widgetsContent.nativeElement.scrollLeft + 250), behavior: 'smooth' });
+  }
+
+  public scrollLeft(): void {
+    this.widgetsContent.nativeElement.scrollTo({ left: (this.widgetsContent.nativeElement.scrollLeft - 250), behavior: 'smooth' });
+  }
+
+  testData: any;
+  testDataShown: any;
+  iTestData: number;
+  constructor(){
+    this.iTestData = 0;
+  }
   @Input() dataKey:any;
   @Input() dataList:any;
   isTextBottom:boolean=false;
   className:string='card-class'
-  width:string='10vw';
   ngOnInit(): void {
-    console.log('inside image slider');
+    
     if(this.dataKey=='New Releases'){
          this.className="new-release-class";  
     }
@@ -48,33 +62,30 @@ export class ImageSliderCardComponent implements OnInit{
       this.className="new-release-class";
     }
    
-    
+    this.testData=this.dataList;
+    console.log('inside image slider');
+    this.setShownData();
 
   }
 
-  customOptions: any = {
-    loop: true,
-    margin: 10,
-    autoplay:true,
-    responsiveClass: true,
-    navText: ['Previous', 'Next'],
-    rtl:true ,
-    responsive: {
-      0: {
-       items: 1
-     },
-      480: {
-       items: 2
-     },
-      940: {
-       items: 3
-     },
-     1000: {
-      items: 4
+  setShownData(){
+    this.testDataShown = this.testData.slice(this.iTestData*8, (this.iTestData+1)*8);
+  }
+
+  previous() {
+    if(this.iTestData != 0) {
+      this.iTestData = this.iTestData - 1;
+      this.setShownData();
     }
-    },
-   nav: true
   }
+
+  next() {
+    if( ((this.iTestData+1) * 8) < this.testData.length){
+      this.iTestData = this.iTestData + 1;
+      this.setShownData();
+    }
+  }
+
 }
 
 

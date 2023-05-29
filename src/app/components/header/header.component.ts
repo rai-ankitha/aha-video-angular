@@ -13,9 +13,6 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-   
-    // this.http.get('http://localhost:4200/assets/json/carousel-data.json')
-    //              .subscribe((data:any) => console.log(data));
   }
   functioncall(event:any) {
     console.log('functioncall', event);

@@ -1,79 +1,31 @@
-/* .product{
-    margin: 40px 0;
-}
-.slider-wrap{
-    position: relative;
-}
-.slider-main{
-    position: absolute;
-}
-.item{
-    display: inline-block;
-    width: 300px;
-    height: 150px;
-    background-color: yellow;
-}
-.text{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: black;
-    font-size: 24px;
-} */
-.button-area {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.prev {
-  position: absolute;
-  left: 63%;
-  top: 700%;
-  transform: translate(-50%, -50%);
-}
-.next {
-  position: absolute;
-  right: -5px;
-}
 
 .card-items {
   display: flex;
-  margin: 10px 20px 30px 20px;
+  margin: 0px 20px 30px 20px;
+  padding-top: 20px;
+ position: relative;
+overflow: hidden;
 
   width: 100%;
 
-  /* width: calc(100%/7); */
 }
-.card-container {
-  margin-right: 10px;
-  /* text-align: center; */
+/* .card-items:hover + .btn-carousel{
+  visibility: visible;
+} */
 
-  /* background-color: yellow; */
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  color: #000;
-}
-#card-img {
-  padding: 0;
-  margin: 0;
-  border-radius: inherit;
-  display: block;
-}
+
 .container {
+  position: relative;
   cursor: pointer;
-  /* transform:translate(-50%,-50%); */
   box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(0, 0, 0, 0);
   transition: all 0.3s ease-in-out;
   &:hover {
+   
     transform: translate3d(0px, -20px, 0px);
   }
 }
 #text {
-    /* white-space: nowrap;
-    overflow: hidden; */
+
    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -84,28 +36,27 @@
 }
 
 .btn-carousel {
+  /* visibility: hidden; */
   /* background-color: yellow; */
   border: none;
   outline: 0;
   position: absolute;
+  
   cursor: pointer;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  /* padding: 0.5em; */
   color: white;
   font-weight: bold;
   font-size: 3em;
   user-select: none;
-  /* top:700%; */
-  /* height: 100%; */
-  /* bottom: -50%; */
-  /* bottom: 0;  */
+  top:calc(49% - 18px);
   width: 5%;
   opacity: 80%;
   transition: opacity 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
-
+  background-attachment :scroll;
+  z-index: 5;
   &:hover,
   &:focus {
     opacity: 1;
@@ -113,39 +64,38 @@
 
   /* Position the buttons */
   &.next {
-    /* background-color: red; */
-    right: 0;
+   
+    right:0;
   }
   &.prev {
-    /* background-color: blue; */
     left: 0;
   }
 }
 
 /* style the arrows */
 .arrow {
+  
   display: block;
   border-left: 0.1em solid white;
   border-bottom: 0.1em solid white;
   width: 0.5em;
   height: 0.5em;
-
+  text-align: center;
   &.left {
+ left: 30px;
     transform: rotate(45deg);
   }
   &.right {
+     right: 30px;
     transform: rotate(225deg);
   }
 }
+/* .card-items :hover + .btn-carousel{
+ visibility: visible;
+} */
 
-.owl-carousel-o {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: 50px;
-}
 .premium-tag {
-  /* align-items: center; */
+
   background-color: rgb(0, 0, 0);
   background-image: linear-gradient(rgb(255, 109, 46) 28.63%, rgb(221, 70, 29));
   border-bottom-left-radius: 8px;
@@ -154,12 +104,8 @@
   align-items: center;
   float: right;
   position: relative;
-  /* align-items: flex-end; */
   display: flex;
   flex-direction: row;
-  /* right: 43%;
-    right: -85%; */
-  /* padding: 1px 1px 1px 2px; */
   width: calc(5vw + 0.390625vw);
   height:calc(1vw + 0.390625vw);
   color: white;
@@ -201,7 +147,6 @@
   height: 18vw;
   width: 12vw;
  
-  
 }
 
 /* CSS class for new daily serials */
@@ -222,7 +167,7 @@
 
 /* CSS class for actors */
 .actors-class{
-  /* object-fit: cover; */
+  
   border-radius:50%;
   height: 12vw;
   width: 12vw;
@@ -260,7 +205,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     width:calc(10vw + 0.390625vw);
-  /* color: #ffff; */
+
   font-size: calc(14px + 0.390625vw);
   position: relative;
   text-overflow: ellipsis;
