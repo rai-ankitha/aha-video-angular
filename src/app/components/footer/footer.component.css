@@ -77,16 +77,17 @@
 .footer-line {
     opacity: .1;
     border: 1px solid #fff;
+    width: 100%;
 }
 
 .footer-bottom {
     display: flex;
     width: 95%;
     margin: auto;
-    padding: 30px 0px 30px 0px;
+    padding: 30px 20px 30px 0px;
     justify-content: space-between;
     align-items: center;
-    margin-right: 30px;
+ 
     color: #fff;
     font-size: 16px;
     color: #fff;
@@ -112,10 +113,10 @@
     display: none;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
 
     .contact-info {
-        margin-left: 10%;
+        margin-left: 5%;
 
     }
 
@@ -138,13 +139,16 @@
 
 @media screen and (max-width: 958px) {
     .footer-bottom {
-        width: calc(75% + 0.3874vw);
+        width: calc(80% + 0.3874vw);
+        
     }
-
+.footer-line{
+    display: none;
+}
     .mobile-nav {
         background: linear-gradient(180deg, #3b4046 9.38%, #2d3037);
         box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
-        position: fixed;
+        position: sticky;
         bottom: 0;
         height: 65px;
         width: 100%;
@@ -153,12 +157,14 @@
         display: flex;
         justify-content: space-around;
         border-radius: 25px 25px 0 0;
+        z-index: 99;
     }
 
     .bloc-icon {
         display: flex;
         justify-content: center;
         align-items: center;
+        text-decoration: none;
     }
 
     .nav-title {

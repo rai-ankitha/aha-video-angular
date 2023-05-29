@@ -6,49 +6,59 @@ import { ViewChild, ElementRef } from "@angular/core";
   styleUrls: ['./image-slider-card.component.css']
 })
 export class ImageSliderCardComponent implements OnInit{
-
+  increment=0;
+ 
   @ViewChild('widgetsContent', { read: ElementRef })
   public widgetsContent!: ElementRef<any>;
 
   public scrollRight(): void {
-    this.widgetsContent.nativeElement.scrollTo({ left: (this.widgetsContent.nativeElement.scrollLeft + 250), behavior: 'smooth' });
+ 
+ 
+    this.widgetsContent.nativeElement.scrollTo({ left: (this.widgetsContent.nativeElement.scrollLeft + 750 ), behavior: 'smooth' });
+    this.increment=this.increment+1;
   }
 
   public scrollLeft(): void {
-    this.widgetsContent.nativeElement.scrollTo({ left: (this.widgetsContent.nativeElement.scrollLeft - 250), behavior: 'smooth' });
+   
+    this.widgetsContent.nativeElement.scrollTo({ left: (this.widgetsContent.nativeElement.scrollLeft - 750), behavior: 'smooth' });
+    this.increment=this.increment-1;
   }
 
-  testData: any;
-  testDataShown: any;
-  iTestData: number;
+
   constructor(){
-    this.iTestData = 0;
+    
   }
   @Input() dataKey:any;
   @Input() dataList:any;
   isTextBottom:boolean=false;
-  className:string='card-class'
+  className:string='card-class';
+  topValue=120;
   ngOnInit(): void {
-    
+    this.increment=0;
     if(this.dataKey=='New Releases'){
-         this.className="new-release-class";  
+         this.className="new-release-class"; 
+         this.topValue=150;
     }
     else if(this.dataKey=='Daily Serial - Mandakini'){
       this.className="dialy-serial-class"; 
     }
     else if(this.dataKey=='Trending Top 10'){
       this.className='trending-class';
+      this.topValue=200;
     }
     else if(this.dataKey=="Actors (A-Z)"){
       this.className='actors-class';
+      this.topValue=100;
     }
     else if(this.dataKey=="aha Originals"){
       this.className='aha-originals';
       this.isTextBottom=true;
+      this.topValue=200;
     }
     else if(this.dataKey=="Genres"){
       this.className='genres';
       this.isTextBottom=true;
+      this.topValue=100;
     }
     else if(this.dataKey=="News Highlights"){
       this.className='news-class';
@@ -62,29 +72,10 @@ export class ImageSliderCardComponent implements OnInit{
       this.className="new-release-class";
     }
    
-    this.testData=this.dataList;
-    console.log('inside image slider');
-    this.setShownData();
-
+  
   }
 
-  setShownData(){
-    this.testDataShown = this.testData.slice(this.iTestData*8, (this.iTestData+1)*8);
-  }
-
-  previous() {
-    if(this.iTestData != 0) {
-      this.iTestData = this.iTestData - 1;
-      this.setShownData();
-    }
-  }
-
-  next() {
-    if( ((this.iTestData+1) * 8) < this.testData.length){
-      this.iTestData = this.iTestData + 1;
-      this.setShownData();
-    }
-  }
+ 
 
 }
 

@@ -10,7 +10,9 @@ export class CarouselComponent implements OnInit{
   constructor(private dataService:DataService){}
   carouselList:any;
   currentIndex:number=0;
-  slideInterval:number=5000;
+  slideInterval:number=3000;
+  showLeftArrow=false;
+  showRightArrow=false;
   imageAlt="https://eurogeo6.org/wp-content/uploads/2020/09/40-1038x576.jpg";
   
   goToNext(){
@@ -42,4 +44,6 @@ autoSlideImages(){
 
   },this.slideInterval)
 }
+
+
 }

@@ -34,6 +34,7 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
+              "/Users/ankitharai/Angular-projects/aha-video/node_modules/font-awesome/css/font-awesome.css",
               "src/styles.css"
             ],
             "scripts": []

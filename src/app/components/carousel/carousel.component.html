@@ -1,4 +1,6 @@
 <div class="carousel-container">
+    <!-- <img  *ngIf="currentIndex>0" class="left-btn" (click)="goToPrevious()" src="https://www.aha.video/aha-arrow.3ae0cd913ff5a84187b2.svg" alt="">
+    <img class="right-btn" (click)="goToNext()" src="https://www.aha.video/aha-arrow.3ae0cd913ff5a84187b2.svg" alt=""> -->
     <img *ngFor="let item of carouselList;let i=index" [src]="item['image']" [alt]=imageAlt
     [ngClass]="{'image-active':currentIndex===i}" 
     class="transition-class">
@@ -6,12 +8,12 @@
         <div (click)="selectImage(i)" *ngFor="let dot of carouselList;let i=index" class="dot-class" [ngClass]="{'active':currentIndex===i
     }"></div>
     </div>
-
-    <div (click)=" goToPrevious()" class="btn-carousel prev">
-        <span class="arrow left"></span>
+   
+    <div *ngIf="currentIndex>0" (click)=" goToPrevious()" (mouseenter)="showLeftArrow=true" (mouseleave)="showLeftArrow=false" class="btn-carousel prev">
+        <span *ngIf="showLeftArrow" class="arrow left"></span>
     </div>
-    <div (click)="goToNext()" class="btn-carousel next">
-        <span class="arrow right"></span>
+    <div (click)="goToNext()" (mouseenter)="showRightArrow=true" (mouseleave)="showRightArrow=false" class="btn-carousel next">
+        <span *ngIf="showRightArrow" class="arrow right"></span>
     </div>
 </div>
 
